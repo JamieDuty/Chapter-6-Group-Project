@@ -23,40 +23,33 @@ graph TD;
 | ------------------ | ------------- | ----------- |
 | ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
-| `     |  | what it returns |
 ***
 | `menu()`    |               |   Anthony     |
 | ------------------ | ------------- | ----------- |
 | ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
-| `     |  | what it returns |
 ***
 | `add()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
 | ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
-| `     |  | what it returns |
 ***
 | `edit()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
 | ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
-| `     |  | what it returns |
 ***
 | `delete()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
 | ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
-| `     |  | what it returns |
 ***
 | `search()`    |               |   Anthony     |
 | ------------------ | ------------- | ----------- |
 | ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
-| `     |  | what it returns |
 ***
 | `display()`    |               |   Jamie     |
 | ------------------ | ------------- | ----------- |
 | ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
-| `     |  | what it returns |
