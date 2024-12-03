@@ -30,18 +30,18 @@ graph TD;
 ***
 | `add()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
-| ``    | takes input for what  |              |
-| `    | what it does  | what it outputs         |
+| ``    | takes input for what  | add up to 7 contacts |
+| `    | what it does  | what it outputs  the contacts |
 ***
 | `edit()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
-| ``    | takes input for what  |              |
-| `    | what it does  | what it outputs         |
+| ``    | takes input for what  |whatever you want to edit |
+| `    | what it does  | what it outputs  you can change it |
 ***
 | `delete()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
-| ``    | takes input for what  |              |
-| `    | what it does  | what it outputs         |
+| ``    | takes input for what  | type contact to delete |
+| `    | what it does  | what it outputs   deleted/erased contact |
 ***
 | `search()`    |               |   Anthony     |
 | ------------------ | ------------- | ----------- |
