@@ -30,7 +30,7 @@ graph TD;
 ***
 | `add()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
-| ``    | takes input for what  | add up to 7 contacts |
+| ``    | takes input for what  | add contacts until user is satisfied|
 | `    | what it does  | what it outputs  the contacts |
 ***
 | `edit()`    |               |   Evan     |
