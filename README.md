@@ -7,12 +7,12 @@ what the game does
  Flowchart
 ```mermaid
 graph TD;
-  main()-->menu();
-  main()-->add();
-  main()-->delete();
-  main()-->display();
-  main()-->edit();
-  main()-->search();
+  main'()'-->menu'()';
+  main'()'-->add'()';
+  main'()'-->delete'()';
+  main'()'-->display'()';
+  main'()'-->edit'()';
+  main'()'-->search'()';
 
 ```
 
