@@ -1,7 +1,7 @@
 # Chapter-6-Group-Project
 Jamie, Anthony, Evan
 ## Contact Manager
-The contact manager is a program that will consist of 7 functions that will help you manage the name, street address, phone number, and email.
+The contact manager is a program that will consist of 7 functions that will help you manage the name, street address, phone number, and email. Menu will displays the menu and take the input on the choice. Main will take the user choice and call the function. Add contact will add a new contact to the file holding the contacts. Edit contact will take a contact from the file holding contacts and change it and push it back the file. Delete contact will remove a contact from the file. Search will allow the user to look up a contact from the file. And display will display all of the contacts on the file.
 ## contact manager Flowchart
 ```mermaid
 graph TD;
