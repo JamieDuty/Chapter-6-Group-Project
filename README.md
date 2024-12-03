@@ -25,8 +25,8 @@ graph TD;
 ***
 | `menu()`    |               |   Anthony     |
 | ------------------ | ------------- | ----------- |
-| ``    | takes input for what  |              |
-| `    | what it does  | what it outputs         |
+| ``    | takes input from the user  |              |
+| `    | it lists the contacts | it outputs the contacts |
 ***
 | `add()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
@@ -45,8 +45,8 @@ graph TD;
 ***
 | `search()`    |               |   Anthony     |
 | ------------------ | ------------- | ----------- |
-| ``    | takes input for what  |              |
-| `    | what it does  | what it outputs         |
+| ``    | takes input the user  |              |
+| `    | gives contact number  | it outputs what the user seaches for |
 ***
 | `display()`    |               |   Jamie     |
 | ------------------ | ------------- | ----------- |
