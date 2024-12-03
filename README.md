@@ -20,12 +20,12 @@ graph TD;
 ***
 | `main()`    |               |   Jamie     |
 | ------------------ | ------------- | ----------- |
-| ``    | takes input for what  |              |
-| `    | what it does  | what it outputs         |
+| ``    | takes input from menu choice  |              |
+| `    | calls the function from menu | outputs the function         |
 ***
 | `menu()`    |               |   Anthony     |
 | ------------------ | ------------- | ----------- |
-| ``    | takes input from the user  |              |
+| ``    | takes input from the user  |   returns menu choice           |
 | `    | it lists the contacts | it outputs the contacts |
 ***
 | `add()`    |               |   Evan     |
@@ -50,5 +50,5 @@ graph TD;
 ***
 | `display()`    |               |   Jamie     |
 | ------------------ | ------------- | ----------- |
-| ``    | takes input for what  |              |
-| `    | what it does  | what it outputs         |
+| ``    | takes input for nothing  |              |
+| `    | displays the all contacts  | outputs the contacts         |
