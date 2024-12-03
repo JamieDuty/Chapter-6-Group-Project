@@ -1,9 +1,8 @@
 # Chapter-6-Group-Project
 Jamie, Anthony, Evan
 ## Contact Manager
-what the game does
-
-#Number Guessing Game
+The contact manager is a program that will consist of 7 functions that will help you manage the name, street address, phone number, and email.
+#contact manager
  Flowchart
 ```mermaid
 graph TD;
@@ -22,42 +21,42 @@ graph TD;
 ***
 | `main()`    |               |   Jamie     |
 | ------------------ | ------------- | ----------- |
-| `random:integer`    | takes input for what  |              |
+| ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
 | `menu()`    |               |   Anthony     |
 | ------------------ | ------------- | ----------- |
-| `random:integer`    | takes input for what  |              |
+| ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
 | `add()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
-| `random:integer`    | takes input for what  |              |
+| ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
 | `edit()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
-| `random:integer`    | takes input for what  |              |
+| ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
 | `delete()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
-| `random:integer`    | takes input for what  |              |
+| ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
 | `search()`    |               |   Anthony     |
 | ------------------ | ------------- | ----------- |
-| `random:integer`    | takes input for what  |              |
+| ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
 | `display()`    |               |   Jamie     |
 | ------------------ | ------------- | ----------- |
-| `random:integer`    | takes input for what  |              |
+| ``    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
