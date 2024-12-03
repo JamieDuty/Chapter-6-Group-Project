@@ -2,8 +2,7 @@
 Jamie, Anthony, Evan
 ## Contact Manager
 The contact manager is a program that will consist of 7 functions that will help you manage the name, street address, phone number, and email.
-#contact manager
- Flowchart
+## contact manager Flowchart
 ```mermaid
 graph TD;
   main-->menu;
