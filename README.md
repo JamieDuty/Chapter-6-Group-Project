@@ -1,59 +1,62 @@
 # Chapter-6-Group-Project
 Jamie, Anthony, Evan
-## Number Guessing Game
+## Contact Manager
 what the game does
 
 #Number Guessing Game
  Flowchart
 ```mermaid
 graph TD;
-  example-->example;
-  example-->example;
-  example-->random;
-  example-->guess;
+  main-->menu;
+  main-->add;
+  main-->delete;
+  main-->display;
+  main-->edit;
+  main-->search;
+
 ```
 
 #### Function Diagrams
 
 
 ***
-| `main()`    |               |   name     |
+| `main()`    |               |   Jamie     |
 | ------------------ | ------------- | ----------- |
 | `random:integer`    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
-| `menu()`    |               |   name     |
+| `menu()`    |               |   Anthony     |
 | ------------------ | ------------- | ----------- |
 | `random:integer`    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
-| `add()`    |               |   name     |
+| `add()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
 | `random:integer`    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
-| `edit()`    |               |   name     |
+| `edit()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
 | `random:integer`    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
-| `delete()`    |               |   name     |
+| `delete()`    |               |   Evan     |
 | ------------------ | ------------- | ----------- |
 | `random:integer`    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
-| `search()`    |               |   name     |
+| `search()`    |               |   Anthony     |
 | ------------------ | ------------- | ----------- |
 | `random:integer`    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
 | `     |  | what it returns |
 ***
-| `display()`    |               |   name     |
+| `display()`    |               |   Jamie     |
 | ------------------ | ------------- | ----------- |
 | `random:integer`    | takes input for what  |              |
 | `    | what it does  | what it outputs         |
