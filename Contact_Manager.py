@@ -48,7 +48,39 @@ def main():
         choice = int(contact_manager())
     print("Thank you for using the Contact Manager System. Have a great day.")
 #-------------------------------------------------------------------------------------------------
-def read_contact(): #option 4
+def write_contact(): #Option 1
+    #write_contact accepts no arguments
+    #it opens the file contact.txt to append
+    #it loops while the user wants to continue entering records
+    #it prompts the user for the coffee description and number of pounds
+    #the user should be prompted if they want to continue
+    
+    #prime the loop, open the file to append, display the header
+    another = 'y'
+    coffee_file = open('contact.txt', 'a')
+    
+    #loop to get the records
+    while another.lower() == 'y':
+        print("Enter the following contact data:\n")
+        name = input("Name: ")
+        address = input("Street Address: ")
+        phone = input("Phone Number: ")
+        email = input("Email Address: ")
+        
+        #append the information to the file
+        contact_file.write(name + "\n")
+        contact_file.write(address + "\n")
+        contact_file.write(phone + "\n")
+        contact_file.write(email + "\n")
+       
+        #prompt for another entry
+        another = input("\nDo you want to enter another? (y to continue): ")
+    
+    #close the file and output a message
+    contact_file.close()
+    print("All data saved to coffee.txt.")
+#-------------------------------------------------------------------------------------------------------
+def read_contact(): #Option 4
     #read_contact accepts no arguments
     #it loops to read the records in coffee.txt
     #and ouputs the description and pounds of coffee
