@@ -22,28 +22,29 @@ def coffee_shop_menu():
 
 def main(): 
     #contact manager accepts no arguments
-    #it calls coffee_shop_menu to display a menu to the user
+    #it calls contact_manager to display a menu to the user
     #and calls each function according to the user input
     
     #prime the loop
-    choice = int(coffee_shop_menu())
+    choice = int(contact_manager())
     
     #validate menu choice
     while choice < 1 or choice > 6:
         print("Invalid choice!")
-        choice = int(coffee_shop_menu())
+        choice = int(contact_manager())
         
     #loop to call the desired function
     while choice != 6:
         if choice == 1:
-            write_coffee()
+            write_contact()
         elif choice == 2:
-            modify_coffee()
+            modify_contact()
         elif choice == 3:
-            delete_coffee()
+            delete_contact()
         elif choice == 4:
-            read_coffee()
+            read_contact()
         elif choice == 5:
-            search_coffee()
-        choice = int(coffee_shop_menu())
-    print("Thank you for using the Caffeine Overload Inventory Control System. Have a great day.")
+            search_contact()
+        choice = int(contact_manager())
+    print("Thank you for using the Contact Manager System. Have a great day.")
+    
