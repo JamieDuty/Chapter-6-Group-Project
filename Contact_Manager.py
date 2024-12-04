@@ -57,7 +57,7 @@ def write_contact(): #Option 1
     
     #prime the loop, open the file to append, display the header
     another = 'y'
-    coffee_file = open('contact.txt', 'a')
+    contact_file = open('contact.txt', 'a')
     
     #loop to get the records
     while another.lower() == 'y':
@@ -72,7 +72,7 @@ def write_contact(): #Option 1
         contact_file.write(address + "\n")
         contact_file.write(phone + "\n")
         contact_file.write(email + "\n")
-       
+        
         #prompt for another entry
         another = input("\nDo you want to enter another? (y to continue): ")
     
@@ -93,16 +93,20 @@ def read_contact(): #Option 4
         print('File not found.')
         return
     
-    desc = contact_file.readline()
-    
-    while desc != '':
-        desc = desc.rstrip('\n')
-        pounds = contact_file.readline().rstrip('\n')
-        
+    name = contact_file.readline()
+    #this is broken
+    while name != '':
+        name = name.rstrip('\n')
+        address = contact_file.readline().rstrip('\n')
+        phone = contact_file.readline().rstrip('\n')
+        email = contact_file.readline().rstrip('\n')
+       
         #output
-        print(f"Description: {desc}")
-        print(f"Pounds: {pounds}")
-        
+        print(f"Name: {name}")
+        print(f"Address: {address}")
+        print(f"Phone Number: {phone}")
+        print(f"Email: {email}")
+
         #read the next description
         desc = contact_file.readline()
     #close the file and output a message
