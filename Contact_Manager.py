@@ -106,11 +106,57 @@ def read_contact(): #Option 4
         print(f"Address: {address}")
         print(f"Phone Number: {phone}")
         print(f"Email: {email}")
-
+    
         #read the next description
         name = contact_file.readline()
     #close the file and output a message
     contact_file.close()
     print("All records read.")
 #--------------------------------------------------------------------------------------------------------
+def search_contact(): #Option 5
+    #search contact accepts no arguments
+    #it searches contact.txt for a string the user enters
+    #if no record matches, it outputs a message to the user
+    
+    #initialize a boolean flag variable
+    found = False
+    
+    #get input from the user
+    search = input("Enter the contact name to search for: ")
+    
+    #open contact.txt to read
+    contact_file = open("contact.txt", 'r')
+    
+    #get the first description to prime the loop
+    name = contact_file.readline()
+    
+    while name != '':
+        # read the next line, address
+        address = contact_file.readline()
+        phone = contact_file.readline()
+        email = contact_file.readline()
+        
+        #strip newline from name
+        name = name.rstrip('\n')
+        
+        #check if the desc == search string
+        if name.lower() == search.lower():
+            print("\n---Record found!---")
+            print(f"Name: {name}")
+            print(f"Address: {address}")
+            print(f"Phone Number: {phone}")
+            print(f"Email: {email}")
+            #Item found, toggle boolean to true
+            found = True
+            break
+        
+        #get another description
+        name = contact_file.readline()
+    
+    #close the file
+    contact_file.close()
+    
+    if not found:
+        print("Record not found")
+#----------------------------------------------------------------------------------------------------------
 main()
