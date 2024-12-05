@@ -78,7 +78,7 @@ def write_contact(): #Option 1
     
     #close the file and output a message
     contact_file.close()
-    print("All data saved to coffee.txt.")
+    print("All data saved to contact.txt.")
 #-------------------------------------------------------------------------------------------------------
 def read_contact(): #Option 4
     #read_contact accepts no arguments
@@ -94,7 +94,7 @@ def read_contact(): #Option 4
         return
     
     name = contact_file.readline()
-    #this is broken
+
     while name != '':
         name = name.rstrip('\n')
         address = contact_file.readline().rstrip('\n')
@@ -108,7 +108,7 @@ def read_contact(): #Option 4
         print(f"Email: {email}")
 
         #read the next description
-        desc = contact_file.readline()
+        name = contact_file.readline()
     #close the file and output a message
     contact_file.close()
     print("All records read.")
