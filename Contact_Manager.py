@@ -80,6 +80,62 @@ def write_contact(): #Option 1
     contact_file.close()
     print("All data saved to contact.txt.")
 #-------------------------------------------------------------------------------------------------------
+def modify_contact(): #Option 2
+    #modify contact accepts no arguments
+    #it imports the os module - this is needed to perform OS related file commands
+    #it searches through the records and allows the user to modify the record
+    
+    #boolean flag variable
+    found = False
+    
+    #get inputs from the user
+    search = input("Enter the coffee description to modify: ")
+    newQty = input("Enter the new quantity (in pounds): ")
+    
+    #open coffee.txt to read and a new temporary file to write
+    coffee_file = open("coffee.txt", 'r')
+    temp_file = open('temp.txt', 'w')
+    
+    #read the first description to prime the loop
+    desc = coffee_file.readline()
+    
+    #loop to read and process each record
+    while desc != '':
+        qty = coffee_file.readline()
+        
+        #strip newline
+        desc = desc.rstrip('\n')
+        qty = qty.rstrip('\n')
+        
+        if search.lower() == desc.lower(): #coffee found, add it AND new qty to temp file
+            #write the description to temp.txt
+            temp_file.write(desc + '\n')
+            temp_file.write(newQty + '\n')
+            found = True
+            break
+        else: #not the coffee you are looking for, write original description and original quantity to temp file
+            temp_file.write(desc + '\n')
+            temp_file.write(qty + '\n')
+            
+        #read the next description
+        desc = coffee_file.readline()
+        
+    #close both files
+    coffee_file.close()
+    temp_file.close()
+    
+    #delete the original coffee.txt
+    os.remove('coffee.txt')
+    
+    #rename temp.txt to coffee.txt
+    os.rename('temp.txt', 'coffee.txt')
+    
+    #description not found
+    if not found:
+        print('\nRecord not found!')
+    else:
+        print(f"The quantity for {desc} has been changed from {qty} to {newQty}.")
+#-------------------------------------------------------------------------------------------------------
 def read_contact(): #Option 4
     #read_contact accepts no arguments
     #it loops to read the records in coffee.txt
