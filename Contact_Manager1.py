@@ -78,7 +78,7 @@ def write_contact(): #Option 1
     
     #close the file and output a message
     contact_file.close()
-    print("All data saved to coffee.txt.")
+    print("All data saved to contact.txt.")
 #-------------------------------------------------------------------------------------------------------
 def modify_contact(): #Option 2
     #modify contact accepts no arguments
