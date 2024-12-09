@@ -135,6 +135,60 @@ def modify_contact(): #Option 2
         print('\nRecord not found!')
     else:
         print(f"The quantity for {desc} has been changed from {qty} to {newQty}.")
+#----------------------------------------------------------------------------------------------------------
+def delete_contact(): #Option 3
+    #delete accepts no arguments
+    #it opens the file coffee.txt and searches for a string to delete
+    # it writes every record except for the record to delete
+    #to a tempoary file and deletes the old file
+    #it renames temp to coffee and closes the file
+    
+    #boolean flag variable
+    found = False
+    
+    #Take input from the user for the search criteria
+    search = input('Enter contact to delete: ')
+    
+    #open the coffee.txt file to read and a new temp file to write
+    contact_file = open('contact.txt', 'r')
+    temp_file = open('newnumber.txt', 'w')
+    
+    #read the first description
+    name = contact_file.readline()
+    
+    #loop the read nad process each record
+    while name != '':
+        number = contact_file.readline()
+        
+        #strip newline
+        name = name.rstrip('\n')
+        address = name.rstrip('\n')
+        number = name.rstrip('\n')
+        email = name.rstrip('\n')
+        
+        #search for and delete the record
+        if search.lower() != name.lower(): #this is a record we need to keep
+            #write both to the temp file
+            temp_file.write(number + '\n')
+            temp_file.write(name + '\n')
+        else:
+            found = True
+            
+        #read the next description
+        name = contact_file.readline()
+            
+    #all record have been processed, close, remove, and rename files
+    contact_file.close()
+    temp_file.close()
+    
+    os.remove('contact.txt') # elete the orginal
+    os.rename('newnumber.txt', 'contact.txt') #rename temp to coffee
+    
+    #confirm deletion to the user
+    if not found: #this is the same as if found == False
+        print ( '\nRecord not found.\n')
+    else:
+        print (search, 'has been deleted from contact.txt')
 #-------------------------------------------------------------------------------------------------------
 def read_contact(): #Option 4
     #read_contact accepts no arguments
