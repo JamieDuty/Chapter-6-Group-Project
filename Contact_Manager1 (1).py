@@ -169,6 +169,9 @@ def delete_contact():  # Option 3
         
         # Strip newline from name
         name = name.rstrip('\n')
+        phone = phone.rstrip('\n')
+        address = address.rstrip('\n')
+        email = email.rstrip('\n')
 
         # Search for and delete the record
         if search.lower() != name.lower():  # If this is a record we need to keep
@@ -178,10 +181,8 @@ def delete_contact():  # Option 3
             temp_file.write(phone + '\n')
             temp_file.write(email + '\n')
  
-            found = True
         else:
-            temp_file.write(name + '\n')
-            temp_file.write(phone + '\n')
+            found = True
             
         #read the next description
         name = contact_file.readline()
@@ -200,7 +201,7 @@ def delete_contact():  # Option 3
     if not found:
         print ('\nRecord not found...')
     else:
-        print ('The details for', search, 'has been updated to the file.')
+        print ('The contact for', search, 'have been deleted.')
 #--------------------------------------------------------------------------------------------------
 def read_contact():  # Option 4
     # read_contact accepts no arguments
