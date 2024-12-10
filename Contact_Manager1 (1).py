@@ -102,36 +102,40 @@ def modify_contact():  # Option 2
     new_email = input('Enter the new email: ')
 
     # Open the contact.txt to read and a new temporary file to write
-    with open('contact.txt', 'r') as contact_file, open('newnumber.txt', 'w') as temp_file:
-        # Read the first record to prime the loop
-        name = contact_file.readline()
-
-        while name != '':
+    contact_file = open('contact.txt', 'r')
+    newnumber = open('newnumber.txt', 'w')
+    # Read the first record to prime the loop
+    name = contact_file.readline()
+    
+    while name != '':
             # Read the next lines: address, phone, and email
-            address = contact_file.readline().rstrip('\n')
-            phone = contact_file.readline().rstrip('\n')
-            email = contact_file.readline().rstrip('\n')
-
-            # Strip newline characters from name
+            address = contact_file.readline()
+            phone = contact_file.readline()
+            email = contact_file.readline()
+            
             name = name.rstrip('\n')
+            address = address.rstrip('\n')
+            phone = phone.rstrip('\n')
+            email = email.rstrip('\n')
 
             # Search for the contact to modify
             if search.lower() == name.lower():  # If contact has been found
-                temp_file.write(new_name + '\n')
-                temp_file.write(new_address + '\n')
-                temp_file.write(new_phone + '\n')
-                temp_file.write(new_email + '\n')
+                newnumber.write(new_name + '\n')
+                newnumber.write(new_address + '\n')
+                newnumber.write(new_phone + '\n')
+                newnumber.write(new_email + '\n')
                 found = True
             else:
                 # Write the current contact's data to the temp file (unchanged)
-                temp_file.write(name + '\n')
-                temp_file.write(address + '\n')
-                temp_file.write(phone + '\n')
-                temp_file.write(email + '\n')
+                newnumber.write(name + '\n')
+                newnumber.write(address + '\n')
+                newnumber.write(phone + '\n')
+                newnumber.write(email + '\n')
 
             # Read the next name for the next record
             name = contact_file.readline()
-
+    contact_file.close()
+    newnumber.close()
     # After processing, delete the original file and rename the temporary file
     if found:
         os.remove('contact.txt')  # Delete the original contact file
