@@ -164,6 +164,8 @@ def delete_contact():   #Option 3
     #loop the read nad process each record
     while name != '':
         number = contact_file.readline()
+        street = contact_file.readline()
+        email = contact_file.readline()
         
         #strip newline
         name = name.rstrip('\n')
@@ -176,6 +178,8 @@ def delete_contact():   #Option 3
             #write both to the temp file
             temp_file.write(number + '\n')
             temp_file.write(name + '\n')
+            temp_file.write(address + '\n')
+            temp_file.write(address + '\n')
         else:
             found = True
             
