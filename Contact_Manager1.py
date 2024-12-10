@@ -141,59 +141,62 @@ def modify_contact():  # Option 2
         os.remove('newnumber.txt')  # Remove the temporary file if no contact was found
         print("Record not found...")
 #-----------------------------------------------------------------------------------------------------
-def delete_contact():   #Option 3
-    #delete accepts no arguments
-    #it opens the file contact.txt and searches for a string to delete
+def delete_contact():  # Option 3
+    # delete accepts no arguments
+    # it opens the file contact.txt and searches for a string to delete
     # it writes every record except for the record to delete
-    #to a tempoary file and deletes the old file
-    #it renames temp to coffee and closes the file
+    # to a temporary file and deletes the old file
+    # it renames the temp file to contact.txt and closes the files
     
-    #boolean flag variable
+    # Boolean flag variable
     found = False
     
-    #Take input from the user for the search criteria
-    search = input('Enter contact to delete: ')
+    # Take input from the user for the search criteria
+    search = input('Enter contact name to delete: ')
     
-    #open the contact.txt file to read and a new temp file to write
+    # Open the contact.txt file to read and a new temp file to write
     contact_file = open('contact.txt', 'r')
     temp_file = open('newnumber.txt', 'w')
     
-    #read the first description
+    # Read the first name to prime the loop
     name = contact_file.readline()
     
-    #loop the read nad process each record
     while name != '':
-        number = contact_file.readline()
+        # Read the next lines: address, phone, and email
+        address = contact_file.readline().rstrip('\n')
+        phone = contact_file.readline().rstrip('\n')
+        email = contact_file.readline().rstrip('\n')
         
-        #strip newline
+        # Strip newline from name
         name = name.rstrip('\n')
-        address = name.rstrip('\n')
-        number = name.rstrip('\n')
-        email = name.rstrip('\n')
-        
-        #search for and delete the record
-        if search.lower() != name.lower(): #this is a record we need to keep
-            #write both to the temp file
-            temp_file.write(number + '\n')
+
+        # Search for and delete the record
+        if search.lower() != name.lower():  # If this is a record we need to keep
+            # Write all fields to the temp file
             temp_file.write(name + '\n')
+            temp_file.write(address + '\n')
+            temp_file.write(phone + '\n')
+            temp_file.write(email + '\n')
         else:
             found = True
-            
-        #read the next description
+
+        # Read the next name for the next record
         name = contact_file.readline()
-            
-    #all record have been processed, close, remove, and rename files
+
+    # All records have been processed, now check if found and handle files
     contact_file.close()
     temp_file.close()
-    
-    os.remove('contact.txt') # elete the orginal
-    os.rename('newnumber.txt', 'contact.txt') #rename temp to coffee
-    
-    #confirm deletion to the user
-    if not found: #this is the same as if found == False
-        print ( '\nRecord not found.\n')
+
+    if found:
+        # Delete the original file
+        os.remove('contact.txt')  
+        # Rename the temp file to contact.txt
+        os.rename('newnumber.txt', 'contact.txt')
+        print(f'{search} has been deleted from contact.txt.')
     else:
-        print (search, 'has been deleted from contact.txt')
+        # If the contact was not found, delete the temporary file
+        os.remove('newnumber.txt')  
+        print('\nRecord not found.\n')
 #--------------------------------------------------------------------------------------------------
 def read_contact():  # Option 4
     # read_contact accepts no arguments
