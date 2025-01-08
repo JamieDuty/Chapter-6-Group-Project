@@ -38,7 +38,7 @@ def main():
     choice = contact_manager()
     
     # Loop to call the desired function based on the choice
-    while choice != 6:
+    while choice != 3:
         if choice == 1:
             write_contact()
         elif choice == 2:
